@@ -37,35 +37,32 @@ export default function ProductsPage() {
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (!loadMoreRef.current) return;
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setVisibleCount((prev) => prev + 6);
+      }
+    });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loadMore();
-        }
-      },
-      { rootMargin: "200px" }
-    );
+    const currentRef = loadMoreRef.current;
+    if (currentRef) observer.observe(currentRef);
 
-    observer.observe(loadMoreRef.current);
     return () => {
-      if (loadMoreRef.current) observer.unobserve(loadMoreRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
-  }, [loadMore]);
+  }, [loadMoreRef]);
 
   return (
     <div className="w-full my-20">
       <div className="w-[90%] mx-auto flex items-center mb-8 md:mb-12 gap-4">
-          {/* Divider line */}
-          <div className="flex-grow h-px bg-gray-300"></div>
-          {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary whitespace-nowrap uppercase">
-            All Products
-          </h2>
-          {/* Divider line */}
-          <div className="flex-grow h-px bg-gray-300"></div>
-        </div>
+        {/* Divider line */}
+        <div className="flex-grow h-px bg-gray-300"></div>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-extrabold text-primary whitespace-nowrap uppercase">
+          All Products
+        </h2>
+        {/* Divider line */}
+        <div className="flex-grow h-px bg-gray-300"></div>
+      </div>
       <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Filters Sidebar */}
         <aside className="lg:col-span-1">

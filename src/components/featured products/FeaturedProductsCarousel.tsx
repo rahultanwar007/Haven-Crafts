@@ -23,9 +23,8 @@ export default function FeaturedProductsCarousel() {
         className="rounded-lg"
       >
         {featuredProducts.map(({ id, name, image, price }) => (
-          <div className="w-full mb-14">
+          <div className="w-full mb-14" key={id}>
             <FeaturedProductCard
-              key={id}
               id={id}
               name={name}
               imageSrc={image}
