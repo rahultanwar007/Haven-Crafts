@@ -2,7 +2,7 @@
 
 import { Carousel } from "react-responsive-carousel";
 import FeaturedProductCard from "./FeaturedProductCard"; // Accepts: id, name, price, image
-import { featuredProducts } from "@/data/featuredProducts";
+import { featuredProducts } from "@/data/trendingProducts";
 
 export default function FeaturedProductsCarousel() {
   return (

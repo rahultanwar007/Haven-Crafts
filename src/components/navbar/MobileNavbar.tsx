@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -61,7 +61,7 @@ export default function MobileNavbar() {
             >
               <FiX />
             </button>
-            <div className="font-extrabold text-2xl mb-4 uppercase bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent">
+            <div className="font-extrabold text-2xl mb-4 uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               HavenCrafts
             </div>
             <nav className="flex flex-col gap-4">
@@ -69,7 +69,7 @@ export default function MobileNavbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg text-primary font-medium hover:text-accent transition"
+                  className="text-lg text-primary font-medium hover:text-secondary2 transition"
                   onClick={() => setOpen(false)}
                 >
                   {link.name}

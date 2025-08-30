@@ -1,19 +1,27 @@
 import AboutUsSection from "@/components/AboutUsSection";
 import ContactInfoCTA from "@/components/ContactInfoCTA";
-import FeaturedProductsSection from "@/components/featured products/FeaturedProducts";
-import FeaturedProductsCarousel from "@/components/featured products/FeaturedProductsCarousel";
-import HeroSection from "@/components/HeroSection";
-import TopCategoriesSection from "@/components/TopCategories";
+import HeroSection from "@/components/hero section/Hero";
+import TrendingProducts from "@/components/trending products/TrendingProducts";
+// import TopCategoriesSection from "@/components/TopCategories";
+import CTASection from "@/components/CTA";
+import CategorySection from "@/components/Categories";
+import ReviewsSection from "@/components/Reviews";
+import BannerSection from "@/components/Banner";
+import WhatsAppCTA from "@/components/WhatsappCTA";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <FeaturedProductsSection />
-      <FeaturedProductsCarousel />
-      <TopCategoriesSection />
-      <AboutUsSection />
-      <ContactInfoCTA />
+      <TrendingProducts />
+      <CTASection />
+      {/* <TopCategoriesSection /> */}
+      <CategorySection />
+      <ReviewsSection />
+      <BannerSection />
+      <WhatsAppCTA />
+      {/* <AboutUsSection />
+      <ContactInfoCTA /> */}
     </>
   );
 }

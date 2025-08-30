@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -28,7 +28,7 @@ export default function DesktopNavbar() {
     >
       <div className="w-[90%] h-full mx-auto flex justify-between items-center">
         {/* Logo */}
-      <div className="text-2xl font-extrabold select-none cursor-default uppercase bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      <div className="text-2xl font-extrabold select-none cursor-default uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
         HavenCrafts
       </div>
 
@@ -38,7 +38,7 @@ export default function DesktopNavbar() {
           <li key={name}>
             <a
               href={href}
-              className="text-primary hover:text-light transition-colors"
+              className="text-primary hover:text-secondary2 transition-colors"
             >
               {name}
             </a>

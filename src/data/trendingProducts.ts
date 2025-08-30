@@ -1,4 +1,4 @@
-export const featuredProducts = [
+export const trendingProducts = [
     {
       id: "sofa1",
       name: "Marcela Luxe Garden Sofa Ensemble",
@@ -25,24 +25,24 @@ export const featuredProducts = [
       price: 1500,
       category: "sofa_sets",
     },
-    // {
-    //   id: "sofa6",
-    //   name: "Hamper Urban Black Sofa Lounging Set",
-    //   image: "/images/sofa_sets/sofa6/main.jpg",
-    //   subImages: [
-    //     "/images/sofa_sets/sofa6/sub1.jpg",
-    //     "/images/sofa_sets/sofa6/sub2.jpg",
-    //     "/images/sofa_sets/sofa6/sub3.jpg",
-    //     "/images/sofa_sets/sofa6/sub4.jpg",
-    //     "/images/sofa_sets/sofa6/sub5.jpg",
-    //     "/images/sofa_sets/sofa6/sub6.jpg",
-    //     "/images/sofa_sets/sofa6/sub7.jpg",
-    //   ],
-    //   description:
-    //     "Unwind outdoors with this contemporary set, featuring a two-seater, two single armchairs, and a sturdy center table. The bold black finish and minimalist lines offer timeless elegance for any exterior space.",
-    //   price: 1300,
-    //   category: "sofa_sets",
-    // },
+    {
+      id: "sofa6",
+      name: "Hamper Urban Black Sofa Lounging Set",
+      image: "/images/sofa_sets/sofa6/main.jpg",
+      subImages: [
+        "/images/sofa_sets/sofa6/sub1.jpg",
+        "/images/sofa_sets/sofa6/sub2.jpg",
+        "/images/sofa_sets/sofa6/sub3.jpg",
+        "/images/sofa_sets/sofa6/sub4.jpg",
+        "/images/sofa_sets/sofa6/sub5.jpg",
+        "/images/sofa_sets/sofa6/sub6.jpg",
+        "/images/sofa_sets/sofa6/sub7.jpg",
+      ],
+      description:
+        "Unwind outdoors with this contemporary set, featuring a two-seater, two single armchairs, and a sturdy center table. The bold black finish and minimalist lines offer timeless elegance for any exterior space.",
+      price: 1300,
+      category: "sofa_sets",
+    },
     {
       id: "dining2",
       name: "Modero Six-Chair Patio Conversation Set",
@@ -86,20 +86,20 @@ export const featuredProducts = [
       price: 1250,
       category: "bar_sets",
     },
-    // {
-    //   id: "lounger2",
-    //   name: "Justy Solo Classic Pool Lounger",
-    //   image: "/images/loungers/lounger2/main.webp",
-    //   subImages: [
-    //     "/images/loungers/lounger2/sub1.webp",
-    //     "/images/loungers/lounger2/sub2.webp",
-    //     "/images/loungers/lounger2/sub3.webp",
-    //   ],
-    //   description:
-    //     "Enjoy solo retreat with this dark brown, ergonomically contoured lounger, crafted for optimum comfort and durability. Its weather-resistant build and deep finish add a touch of sophistication to any pool deck or garden space.",
-    //   price: 1100,
-    //   category: "loungers",
-    // },
+    {
+      id: "lounger2",
+      name: "Justy Solo Classic Pool Lounger",
+      image: "/images/loungers/lounger2/main.webp",
+      subImages: [
+        "/images/loungers/lounger2/sub1.webp",
+        "/images/loungers/lounger2/sub2.webp",
+        "/images/loungers/lounger2/sub3.webp",
+      ],
+      description:
+        "Enjoy solo retreat with this dark brown, ergonomically contoured lounger, crafted for optimum comfort and durability. Its weather-resistant build and deep finish add a touch of sophistication to any pool deck or garden space.",
+      price: 1100,
+      category: "loungers",
+    },
     {
       id: "lounger8",
       name: "Aver Poolside Duo Loungers (Brown)",
