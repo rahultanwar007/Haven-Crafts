@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { productsByCategory, Product, ProductCategory } from "@/data/products";
@@ -8,6 +8,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LuSlidersHorizontal } from "react-icons/lu";
 import Link from "next/link";
+import Loader from "@/components/Loader";
 
 // Map friendly slugs in the URL to the actual category keys
 const SLUG_TO_KEY: Record<string, ProductCategory> = {
@@ -28,7 +29,7 @@ const allProducts: Product[] = Object.values(productsByCategory).flat();
 // Category list
 const CATEGORIES = Object.keys(productsByCategory) as ProductCategory[];
 
-export default function ProductsPage() {
+function ProductsPageContent() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -230,5 +231,13 @@ export default function ProductsPage() {
         )}
       </div>
     </section>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<Loader />}>
+      <ProductsPageContent />
+    </Suspense>
   );
 }
