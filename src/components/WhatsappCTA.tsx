@@ -8,7 +8,7 @@ export default function WhatsAppCTA() {
   const message = encodeURIComponent(
     "Hello, I would like to customize a product of my choice. Can you help me?"
   );
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappLink = `https://wa.me/+91${phoneNumber}?text=${message}`;
 
   return (
     <section className="my-10 w-full bg-gradient-to-r from-ocean to-green text-white shadow-lg p-3 ">

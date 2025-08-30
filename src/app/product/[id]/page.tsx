@@ -36,7 +36,7 @@ export default function ProductPage() {
   );
 
   const whatsappMessage = `Hi, I’m interested in ${product.name}. Could you tell me more?`;
-  const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/+91${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappMessage
   )}`;
 

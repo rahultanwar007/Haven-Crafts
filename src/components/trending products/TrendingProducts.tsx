@@ -25,7 +25,8 @@ export default function TrendingProducts() {
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {trendingProducts.slice(0, 8).map((product) => (
-            <div
+            <Link
+              href={"/product/" + product.id}
               key={product.id}
               className="group rounded-lg shadow hover:shadow-lg transition overflow-hidden border"
             >
@@ -42,14 +43,15 @@ export default function TrendingProducts() {
                   {product.name}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* Mobile Scroll */}
         <div className="md:hidden flex space-x-4 overflow-x-auto snap-x snap-mandatory pb-4">
           {trendingProducts.slice(0, 6).map((product) => (
-            <div
+            <Link
+              href={"/product/" + product.id}
               key={product.id}
               className="snap-start min-w-[250px] rounded-lg shadow hover:shadow-lg transition overflow-hidden border"
             >
@@ -66,7 +68,7 @@ export default function TrendingProducts() {
                   {product.name}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
