@@ -16,14 +16,6 @@ export default function ProductPage() {
   const params = useParams();
   const { id } = params;
 
-  const product = allProducts.find((p) => p.id === id);
-
-  if (!product) return notFound();
-
-  const similarProducts = allProducts.filter(
-    (p) => p.category === product.category && p.id !== product.id
-  );
-
   // Embla carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const scrollPrev = useCallback(
@@ -33,6 +25,14 @@ export default function ProductPage() {
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
     [emblaApi]
+  );
+
+  const product = allProducts.find((p) => p.id === id);
+
+  if (!product) return notFound();
+
+  const similarProducts = allProducts.filter(
+    (p) => p.category === product.category && p.id !== product.id
   );
 
   const whatsappMessage = `Hi, I’m interested in ${product.name}. Could you tell me more?`;
